@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=Fe5HuXjBvqTUb0j4j0uFB1XxXMjRTtOtHL2EIZC2jPERqau6HIlqFnZkbE1ovYw0FXWR7F9aWOnbmAjR6KFiy7nbHl4k3chxkOqXeYdIffaC1sscHjWhcaW8oY0lgwePdzas3ArsRGR9Cg63IXtKtXyNr-eyJtMkokDZMVRxAFU" charset="UTF-8"
+            src="https://code.jquery.com/jquery-3.6.1.min.js"
+            integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+            crossorigin="anonymous"></script>
+        <link href="dateCount.js" rel="stylesheet">
+    </head>
+    
+    <body>
+        <div id="maincontainer" ></div>
+        <script>
+            const maincontainer=document.getElementById("maincontainer");
+            const bodyP=document.querySelectorAll("body")[0];
+
+            //Part1 -------------------------------
+            //title --
+            const title=document.createElement("h2");
+            title.innerText="Exercise 04:JavaScript&DOM"
+            maincontainer.appendChild(title);
+            //document.body.appendChild(title);
+
+            //create button --
+            let button=document.createElement("button");
+            button.innerHTML="Click me to display Date and Time"
+            maincontainer.appendChild(button);
+            button.addEventListener('click',function (){
+                const time=document.createElement("div");
+                time.innerHTML=new Date();
+                //setTimeout(maincontainer.appendChild(time),1000);
+                maincontainer.appendChild(time)
+            });
+
+            let blank=document.createElement("div");
+            blank.innerHTML=("\n");
+            maincontainer.appendChild(blank);
+
+            //Personal Info --
+            let persInfo=document.createElement("a");
+            persInfo.innerHTML="Personal Info";
+            persInfo.href="#";
+            maincontainer.appendChild(persInfo);
+
+            let dataInfo=document.createElement("ul");
+            dataInfo.innerHTML="<li>Kittaporn Buriyameathakul, ID: 64011041   \n<li>Subject: Web Application Development   \n<li>Semester: 2  \n";
+
+            persInfo.addEventListener('click',function(){
+                console.log(dataInfo.style.display)
+                /*if (dataInfo.style.display == "none") {
+                    dataInfo.style.display = "block";
+                    maincontainer.appendChild(dataInfo);
+                } else {
+                    dataInfo.style.display = "none";
+                }*/
+                if (dataInfo.style.display == "block") {
+                    dataInfo.style.display = "none";
+                } else {
+                    dataInfo.style.display = "block";
+                    maincontainer.appendChild(dataInfo);
+                }
+            });
+            persInfo.addEventListener('mouseover',function(){
+                persInfo.style.background="yellow";
+            })
+            persInfo.addEventListener('mouseout',function(){
+                persInfo.style.background="white";
+            })
+            
+            //Part2 -------------------------------
+            //Snapshorts --
+            let textSnap=document.createElement('h1');
+            textSnap.innerHTML='Snapshorts';
+            //maincontainer.appendChild(textSnap)
+            bodyP.appendChild(textSnap);
+            //document.getElementsByTagName("body")[0].appendChild(textSnap);
+            /*var body = document.getElementsByTagName("body")[0];
+            body.appendChild(textSnap);*/
+
+            //image-default --
+            const img=document.createElement("img");
+            img.src="https://ichef.bbci.co.uk/news/999/cpsprodpb/15951/production/_117310488_16.jpg";
+            img.style.width="500px";
+            
+            //image
+            const img0=document.createElement("img");
+            img0.src="https://cdn.pixabay.com/photo/2017/01/12/20/27/soap-bubble-1975567__340.jpg";
+            img0.style.width="500px";
+
+            const img1=document.createElement("img");
+            img1.src="https://cdn.pixabay.com/photo/2017/01/17/00/06/soap-bubble-1985598__340.jpg";
+            img1.style.width="500px";
+
+            const img2=document.createElement("img");
+            img2.src="https://images.unsplash.com/photo-1524799744590-dd8442863563?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDEyfHx8ZW58MHx8fHw%3D&w=1000&q=80";
+            img2.style.width="500px";
+
+            const img3=document.createElement("img");
+            img3.src="https://pikwizard.com/pw/small/6b96952deec7bcada62319d0fc1215aa.jpg";
+            img3.style.width="500px";
+
+            //list photo
+            let snaplist=document.createElement("ul");
+
+            let marble=Array();
+            for(let i=0;i<4;i++){
+                let num=i+1;
+                marble[i]=document.createElement("a");
+                marble[i].innerHTML="<li>image"+num;
+                marble[i].href="#";
+                snaplist.appendChild(marble[i]);
+                console.log(marble[i]);
+            }
+            bodyP.appendChild(snaplist);
+            bodyP.appendChild(img);
+            let state;
+
+            marble[0].addEventListener('click',function(){
+                console.log(state);
+                //removeImg(state);
+                state=0;
+                console.log(state);
+                bodyP.appendChild(img0);
+            })
+            marble[1].addEventListener('click',function(){
+                console.log(state);
+                //removeImg(state);
+                state=1;
+                console.log(state);
+                bodyP.appendChild(img1);
+            })
+            marble[2].addEventListener('click',function(){
+                console.log(state);
+                removeImg();
+                state=2;
+                console.log(state);
+                bodyP.appendChild(img2);
+            })
+            marble[3].addEventListener('click',function(){
+                console.log(state)
+                removeImg(state);
+                state=3;
+                console.log(state);
+                bodyP.appendChild(img3);
+            })
+
+            function removeImg(state){
+                console.log("hello"+state);
+                switch(state){
+                    case "0":
+                        bodyP.removeChild(img0);
+                        break;
+                    case "1":
+                        bodyP.removeChild(img1);
+                        break;
+                    case "2":
+                        bodyP.removeChild(img2);
+                        break;
+                    case "3":
+                        bodyP.removeChild(img3);
+                        break;
+                    default:
+                        bodyP.removeChild(img);
+                        break;
+                }
+            }
+
+            
+        /*let rar=Array();
+        for(let i=0;i<4;i++){
+            rar[i]=document.createElement("a");
+            rar[i].innerHTML="hello";
+            console.log(rar[i]);
+
+            console.log(marble.style.display)
+                if(img1.style.display=="none"){
+                    img1.style.display="block";
+                    bodyP.removeChild(img);
+                    bodyP.appendChild(img1);
+                }else{
+                    img1.style.display="none";
+                    bodyP.appendChild(img1);
+                }
+        }*/
+        </script>
+    </body>
+</html>

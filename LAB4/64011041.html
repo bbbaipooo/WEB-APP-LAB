@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=Fe5HuXjBvqTUb0j4j0uFB1XxXMjRTtOtHL2EIZC2jPERqau6HIlqFnZkbE1ovYw0FXWR7F9aWOnbmAjR6KFiy7nbHl4k3chxkOqXeYdIffaC1sscHjWhcaW8oY0lgwePdzas3ArsRGR9Cg63IXtKtXyNr-eyJtMkokDZMVRxAFU" charset="UTF-8"></script>
+    </head>
+    <body>
+        <div id="maincontainer" ></div>
+        <script>
+            const maincontainer=document.getElementById("maincontainer");
+            const bodyP=document.querySelectorAll("body")[0];
+
+            //Part1 -------------------------------
+            //title --
+            const title=document.createElement("h2");
+            title.innerText="Exercise 04:JavaScript&DOM"
+            maincontainer.appendChild(title);
+
+            //button --
+            const div=document.createElement("div");
+            div.style.height="50px";
+
+            colorBackG=["#B4CFEC","#A5C1C4","#D291BC","#595794","#B3BBCD","#EEF1DB",];
+            colorText=["#70658A","#485B63","#FFFFFF","#EBEBEB","#4E3527","#695A5B"];
+            let countColor=0;
+            let dateButtonActive=true;
+
+            const defaultButton=document.createElement("button");
+            const dateButton=document.createElement("button");
+            defaultButton.innerHTML="Click me to Display Date and Time";
+            div.appendChild(defaultButton);
+            div.appendChild(dateButton);
+            maincontainer.appendChild(div);
+            dateButton.hidden=true;
+
+            defaultButton.addEventListener("click",function(){
+                defaultButton.hidden=true;
+                dateButton.hidden=false;
+                startWorker();
+            });
+
+            dateButton.addEventListener("click",function(){
+                console.log("hi");
+                if(dateButtonActive){
+                    //console.log("inn")
+                    stopWorker();
+                    //console.log('in')
+                }else{
+                    startWorker();
+                }
+
+                dateButtonActive= !dateButtonActive;
+            });
+
+            function startWorker(){
+                worker=new Worker("webWorker.js");
+                worker.addEventListener("message",function(event){
+                    dateButton.innerHTML=event.data;
+                    //position
+                    dateButton.style.position="fixed";
+                    dateButton.style.right=0;
+                    dateButton.style.top=0;
+                    //color
+                    dateButton.style.backgroundColor=colorBackG[countColor];
+                    dateButton.style.color=colorText[countColor];
+                    countColor=(countColor+1)%colorBackG.length;
+                });
+            }
+
+            function stopWorker(){
+                //console.log("hello");
+                dateButton.style.position=null;
+                worker.terminate();
+            }
+
+
+
+            
+            let blank=document.createElement("div");
+            blank.innerHTML=("\n");
+            maincontainer.appendChild(blank);
+
+            //Personal Info --
+            let persInfo=document.createElement("a");
+            persInfo.innerHTML="Personal Info";
+            persInfo.href="#";
+            persInfo.style.color="pink";
+            maincontainer.appendChild(persInfo);
+
+            let dataInfo=document.createElement("ul");
+            dataInfo.innerHTML="<li>Kittaporn Buriyameathakul, ID: 64011041   \n<li>Subject: Web Application Development   \n<li>Semester: 2  \n";
+
+            persInfo.addEventListener('click',function(){
+                console.log(dataInfo.style.display)
+                if (dataInfo.style.display == "block") {
+                    dataInfo.style.display = "none";
+                } else {
+                    dataInfo.style.display = "block";
+                    maincontainer.appendChild(dataInfo);
+                }
+            });
+            persInfo.addEventListener('mouseover',function(){
+                persInfo.style.background="yellow";
+                persInfo.style.color="blue";
+            })
+            persInfo.addEventListener('mouseout',function(){
+                persInfo.style.background="white";
+                persInfo.style.color="pink";
+            })
+            
+            //Part2 -------------------------------
+            //Snapshorts --
+            let textSnap=document.createElement('h1');
+            textSnap.innerHTML='Snapshorts';
+            bodyP.appendChild(textSnap);
+
+            //image-default --
+            const img=document.createElement("img");
+            img.src="https://ichef.bbci.co.uk/news/999/cpsprodpb/15951/production/_117310488_16.jpg";
+            img.style.width="600px";
+            //image
+            let imagesrc=["https://cdn.pixabay.com/photo/2017/01/12/20/27/soap-bubble-1975567__340.jpg",
+                            "https://cdn.pixabay.com/photo/2017/01/17/00/06/soap-bubble-1985598__340.jpg",
+                            "https://images.unsplash.com/photo-1524799744590-dd8442863563?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDEyfHx8ZW58MHx8fHw%3D&w=1000&q=80",
+                            "https://pikwizard.com/pw/small/6b96952deec7bcada62319d0fc1215aa.jpg"]
+            
+            //list photo
+            let ul=document.createElement("ul");
+
+            
+            for(let i=0;i<4;i++){
+                let num=i+1;
+                const li=document.createElement("li");
+                const marble=document.createElement("a");
+                marble.innerHTML="image"+num;
+                marble.href="#";
+                marble.addEventListener("click" , function() { 
+                    img.src = imagesrc[i]; 
+                });
+                li.appendChild(marble);
+                ul.appendChild(li);
+            }
+            bodyP.appendChild(ul);
+            bodyP.appendChild(img);
+            
+        </script>
+    </body>
+</html>

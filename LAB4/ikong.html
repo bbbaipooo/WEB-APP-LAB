@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+    <body>
+        <div id="maincontainer"></div>
+        <a href="" onmouseover="hightlight(this)" onmouseout="unhightlight(this)">link</a>
+        <script>
+            
+            //asd.innerHTML="dfskljflkdsjf";
+            //document.write("link");
+            var linkText = document.createTextNode("sdsdlj");
+            linkText.style.background="yellow";
+            document.body.append(linkText);
+            
+
+            function hightlight(obj){
+                obj.style.background="yellow";
+                const asd = document.createElement("div");
+            }
+            function unhightlight(obj){
+                obj.style.background="white";
+            }
+
+            
+            const createButton = document.createElement('button');
+            createButton.innerText="Click_Me"
+            document.body.appendChild(createButton);
+
+            
+
+            /*let text = "Free Web Building Tutorials!";
+            let result = text.link("https://www.w3schools.com");
+            document.write(result);*/
+        </script>
+    </body>
+</html>

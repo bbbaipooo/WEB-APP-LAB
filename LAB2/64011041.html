@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>undersea world</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/e71676c9ed.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Itim&display=swap" rel="stylesheet">
+    <style>
+        *{
+            font-family: 'Itim', cursive;
+        }
+
+        .carousel-item{
+            height: 500px;
+        }
+        
+        .carousel-image-5{
+            background-image: url('https://bestanimations.com/media/jellyfish/100646231jellyfish-underwater-animated-gif-picture-12.gif');
+            background-size:cover ;
+            
+            margin-top: -50px;
+            height:550px
+        }
+        
+        .carousel-image-4{
+            background-image: url('https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/clownfish-royalty-free-image-1590077233.jpg');
+            background-size: cover;
+            margin-top: -200px;
+            height:700px
+        }
+        
+        .carousel-image-1{
+            background-image: url('https://img3.goodfon.com/wallpaper/nbig/e/e0/tropical-coral-reef-1928.jpg');
+            background-size: cover;
+        }
+        .carousel-image-3{
+            background-image: url('https://i2.wp.com/i.ytimg.com/vi/_vpaLmarOEs/maxresdefault.jpg');
+            background-size: cover;
+        }
+        .carousel-image-2{
+            background-image: url('https://assets.puzzlefactory.pl/puzzle/391/636/original.jpg');
+            background-size: cover;
+        }
+        
+        
+        #about{
+            min-height: 200px;
+            position: relative;
+            background-image: url("https://media.istockphoto.com/id/1323316188/photo/underwater-diving-tropical-scene-with-sea-life-in-the-reef.jpg?b=1&s=170667a&w=0&k=20&c=kNaE0hoHaTCIO30u7fjP-oZrv-G20UHhCm0EHWZDRHw=");
+            background-size: cover;
+            background-repeat: no-repeat;
+            text-align: center;
+            color:#fff;
+            background-attachment: fixed;
+        }
+        .dark-overlay{
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: rgba(82, 81, 83, 0.7);
+            width: 100%;
+            height: 100%;
+        }
+        .item{
+            flex:1;
+        }
+        .item1{
+            border-right: 4px solid rgb(58, 45, 84);
+        }
+        .item2{
+            margin-left: 10%;
+            flex:2;
+        }
+        .flexSt{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .img-fluid{
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <!-- สร้างเมนู -->
+    <nav class="navbar fixed-top navbar-dark bg-dark" >
+        <div class="container" >
+            <a href="work.html" class="navbar-brand">Welcome To Undersea World Block</a>
+            <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar1">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div id="navbar1" class="collapse navbar-collapse">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a href="64011041.html" class="nav-link">หน้าแรก</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#block" class="nav-link">welcome to my block</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#data1" class="nav-link">ปลาขี้ตังเบ็ดฟ้า</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#data2" class="nav-link">ปลาขี้ตังเบ็ดลาย</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#data3" class="nav-link">ปลาผีเสื้อเทวรูป</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#data4" class="nav-link">ปลาผีเสื้อลายไขว้</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#data5" class="nav-link">ปลานีโม่</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#data6" class="nav-link">ปลาสินสมุทร</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#data7" class="nav-link">แมงกะพรุน</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- การสร้าง Slider -->
+    <section id="slider">
+         <div class="carousel slide" data-bs-ride="carousel" id="mySlider">
+             <ol class="carousel-indicators">
+                 <button data-bs-target="#mySlider" data-bs-slide-to="0" class="active"></button>
+                 <button data-bs-target="#mySlider" data-bs-slide-to="1"></button>
+                 <button data-bs-target="#mySlider" data-bs-slide-to="2"></button>
+                 <button data-bs-target="#mySlider" data-bs-slide-to="3"></button>
+                 <button data-bs-target="#mySlider" data-bs-slide-to="4"></button>
+             </ol>
+             <div class="carousel-inner">
+                 <div class="carousel-item carousel-image-1 active">
+                     <div class="container">
+                         <div class="carousel-caption d-none d-sm-block">
+                             <h1 class="display-3">กลุ่มปลาในแนวปะการัง</h1>
+                             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magni asperiores impedit iste velit. Tenetur nostrum voluptatum quod obcaecati quisquam animi?</p>
+                         </div>
+                     </div>
+                 </div>
+                 <div class="carousel-item carousel-image-2 ">
+                    <div class="container">
+                        <div class="carousel-caption d-none d-sm-block">
+                            <h1 class="display-3">ปลาสินสมุทรจักรพรรดิ</h1>
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magni asperiores impedit iste velit. Tenetur nostrum voluptatum quod obcaecati quisquam animi?</p>
+                        </div>
+                    </div>
+                 </div>
+                 <div class="carousel-item carousel-image-3 ">
+                    <div class="container">
+                        <div class="carousel-caption d-none d-sm-block">
+                            <h1 class="display-3">ปลาขี้ตังเบ็ด</h1>
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magni asperiores impedit iste velit. Tenetur nostrum voluptatum quod obcaecati quisquam animi?</p>
+                        </div>
+                    </div>
+                 </div>
+                 <div class="carousel-item carousel-image-4 ">
+                    <div class="container">
+                        <div class="carousel-caption d-none d-sm-block">
+                            <h1 class="display-3">ปลานีโม่</h1>
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magni asperiores impedit iste velit. Tenetur nostrum voluptatum quod obcaecati quisquam animi?</p>
+                        </div>
+                    </div>
+                 </div>
+                 <div class="carousel-item carousel-image-5 ">
+                    <div class="container">
+                        <div class="carousel-caption d-none d-sm-block">
+                            <h1 class="display-3">แมงกะพรุนเรืองแสง</h1>
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magni asperiores impedit iste velit. Tenetur nostrum voluptatum quod obcaecati quisquam animi?</p>
+                        </div>
+                    </div>
+                 </div>
+                 <button class="carousel-control-prev" data-bs-target="#mySlider" data-bs-slide="prev">
+                     <span class="carousel-control-prev-icon"></span>
+                 </button>
+                 <button class="carousel-control-next" data-bs-target="#mySlider" data-bs-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </button>
+             </div>
+         </div>
+    </section>
+
+    <!-- My Block Section -->
+    <section id="block" class="py-5">
+        <div class="container" >
+            <div class="row item">
+                <div class="col-md-4 text-center mb-4 item1">
+                    <br>
+                    <i class="fas fa-camera fa-3x mb-2"></i>&nbsp&nbsp&nbsp&nbsp
+                    <i class="fas fa-photo-video fa-3x mb-2"></i>
+                    <h3>welcome to <br>my block channel</h3>
+                </div>
+                <div class="col-md-4 text-center mb-4 item2">
+                    <br>
+                    <h3>🐡 &nbsp undersea world &nbsp 🦈</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sunt eum neque corrupti repudiandae vel similique. Voluptas commodi id vel. Possimus maiores assumenda explicabo iste dignissimos, ab natus voluptates adipisci deleniti nulla minus eveniet quam error  eius inventore, aliquam doloremque.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- about -->
+    <section id="about" class="p-5">
+        <div class="dark-overlay">
+            <div class="row">
+                <div class="col">
+                    <div class="container pt-5">
+                        <h1>Are you ready ?</h1>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium blanditiis iste quibusdam. Eos impedit soluta asperiores expedita corrupti sequi quisquam, minus, non ipsa nostrum recusandae obcaecati consequuntur esse in voluptatum.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- DATA -->
+    <section id="gallary" class="p-5">
+        <div class="container ">
+            <!-- Data1 -->
+            <div id="data1">
+                <br><br>
+                <h1 class="text-center">ปลาขี้ตังเบ็ดฟ้า</h1>
+                <p class="text-center">&nbsp&nbsp&nbsp
+                    
+                    ปลาขี้ตังเบ็ดฟ้าอกขาว (อังกฤษ: Powder blue tang, Powderblue surgeonfish; ชื่อวิทยาศาสตร์: Acanthurus leucosternon) ปลาทะเลชนิดหนึ่ง ในวงศ์ปลาขี้ตังเบ็ด (Acanthuridae)
+
+                    เป็นปลาขี้ตังเบ็ดชนิดหนึ่ง มีรูปร่างแบนข้าง ลำตัวรูปไข่ ด้านหน้ากว้าง จะงอยปากเรียว ปากเล็ก ครีบใหญ่ หน้าดำ มีแถบสีขาวที่จะงอยปาก ใต้คางและอกเป็นสีขาวนวล ลำตัวมีสีฟ้าสด ครีบหลังสีเหลืองมีขอบสีขาว ครีบหางขาว มีแถบดำ ครีบก้นสีจางขอบขาว คอดหางสีเหลือง
+                    
+                    มีขนาดความยาวเต็มที่ประมาณ 30 เซนติเมตร แต่ขนาดโดยเฉลี่ย 23 เซนติเมตร
+                    
+                    เป็นปลาที่อาศัยอยู่รวมกันเป็นฝูงใหญ่ ตามแนวปะการัง กินสัตว์ขนาดเล็ก ๆ ที่เกาะตามโพรงหินและสาหร่าย เป็นปลาที่พบได้บ่อยในมหาสมุทรอินเดีย ในเขตน่านน้ำไทยพบได้เฉพาะฝั่งทะเลอันดามัน
+    
+                    นิยมเลี้ยงเป็นปลาสวยงาม โดยเลี้ยงรวมกันเป็นกลุ่ม หรือรวมกับปลาชนิดอื่นที่มีความใกล้เคียงกัน</p>
+                <br>
+                <div class="row mb-4 flexSt">
+                    <div class="col-md-4">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Acanthurus_leucosternon_in_UShaka_Sea_World_1091.jpg/800px-Acanthurus_leucosternon_in_UShaka_Sea_World_1091.jpg" class="img-fluid">
+                    </div>
+                    <div class="col-md-4">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Maldives_Surgeonfish%2C_Acanthurus_leucosternon.jpg/440px-Maldives_Surgeonfish%2C_Acanthurus_leucosternon.jpg" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+            <!-- Data2 -->
+            <div id="data2">
+                <br><br>
+                <h1 class="text-center">ปลาขี้ตังเบ็ดลาย</h1>
+                <p class="text-center">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facilis dolores corrupti cum nobis enim natus id incidunt voluptatem, harum eaque fuga assumenda dolorem aliquid non ratione magni repudiandae temporibus consequuntur quae aperiam a sunt dicta vero? Est hic ad qui soluta itaque veritatis minima iure at quo temporibus vitae reiciendis dolore libero tenetur amet, esse nihil molestias porro quas error facilis doloribus repellat. Laborum nobis quo iste? Qui assumenda nihil quos nisi repudiandae maxime, obcaecati harum culpa soluta alias voluptas beatae necessitatibus voluptatibus unde. Ducimus ipsam laudantium, quia dolores molestias consequatur neque sunt magnam repellat aliquid tempore, tempora esse ea?</p>
+                <br>
+                <div class="row mb-4 flexSt">
+                    <div class="col-md-4">
+                        <img src="https://cdn.shopify.com/s/files/1/0253/1550/8312/products/lg_73876_Clown_Tang_576x.jpg?v=1599654462" class="img-fluid">
+                    </div>
+                    <div class="col-md-4">
+                        <img src="https://thumbs.dreamstime.com/b/pagliaccio-tang-acanthurus-lineatus-l-il-surgeonfish-allineato-%C3%A8-un-membro-delle-acanthuridae-della-famiglia-i-surgeonfishes-142734785.jpg" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Data3 -->
+            <div id="data3">
+                <br><br>
+                <h1 class="text-center">ปลาผีเสื้อเทวรูป</h1>
+                <p class="text-center">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facilis dolores corrupti cum nobis enim natus id incidunt voluptatem, harum eaque fuga assumenda dolorem aliquid non ratione magni repudiandae temporibus consequuntur quae aperiam a sunt dicta vero? Est hic ad qui soluta itaque veritatis minima iure at quo temporibus vitae reiciendis dolore libero tenetur amet, esse nihil molestias porro quas error facilis doloribus repellat. Laborum nobis quo iste? Qui assumenda nihil quos nisi repudiandae maxime, obcaecati harum culpa soluta alias voluptas beatae necessitatibus voluptatibus unde. Ducimus ipsam laudantium, quia dolores molestias consequatur neque sunt magnam repellat aliquid tempore, tempora esse ea?</p>
+                <br>
+                <div class="row mb-4 flexSt">
+                    <div class="col-md-4">
+                        <img src="http://t3.gstatic.com/licensed-image?q=tbn:ANd9GcR_jHf473-gbQ70bdCCeyZhkes9dqqba_OSaPyt62kW2DklH9zIUrxD1RkBxBuEay4izWiLGv3LwOVXYlA" class="img-fluid">
+                    </div>
+                    <div class="col-md-4">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/Zanclus_cornutus_in_Kona.jpg/640px-Zanclus_cornutus_in_Kona.jpg" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+            <!-- Data4 -->
+            <div id="data4">
+                <br><br>
+                <h1 class="text-center">ปลาผีเสื้อลายไขว้</h1>
+                <p class="text-center">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facilis dolores corrupti cum nobis enim natus id incidunt voluptatem, harum eaque fuga assumenda dolorem aliquid non ratione magni repudiandae temporibus consequuntur quae aperiam a sunt dicta vero? Est hic ad qui soluta itaque veritatis minima iure at quo temporibus vitae reiciendis dolore libero tenetur amet, esse nihil molestias porro quas error facilis doloribus repellat. Laborum nobis quo iste? Qui assumenda nihil quos nisi repudiandae maxime, obcaecati harum culpa soluta alias voluptas beatae necessitatibus voluptatibus unde. Ducimus ipsam laudantium, quia dolores molestias consequatur neque sunt magnam repellat aliquid tempore, tempora esse ea?</p>
+                <br>
+                <div class="row mb-4 flexSt">
+                    <div class="col-md-4">
+                        <img src="https://mltmpgeox6sf.i.optimole.com/w:auto/h:auto/q:mauto/f:avif/https://fishandcoralstore.com/wp-content/uploads/2022/02/auriga-butterflyfish.jpg" class="img-fluid">
+                    </div>
+                    <div class="col-md-4">
+                        <img src="https://www.snorkeling-report.com/wp-content/uploads/2019/01/chaetodon-auriga.jpg" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+        
+            <!-- Data5 -->
+            <div id="data5">
+                <br><br>
+                <h1 class="text-center">ปลานีโม่</h1>
+                <p class="text-center">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facilis dolores corrupti cum nobis enim natus id incidunt voluptatem, harum eaque fuga assumenda dolorem aliquid non ratione magni repudiandae temporibus consequuntur quae aperiam a sunt dicta vero? Est hic ad qui soluta itaque veritatis minima iure at quo temporibus vitae reiciendis dolore libero tenetur amet, esse nihil molestias porro quas error facilis doloribus repellat. Laborum nobis quo iste? Qui assumenda nihil quos nisi repudiandae maxime, obcaecati harum culpa soluta alias voluptas beatae necessitatibus voluptatibus unde. Ducimus ipsam laudantium, quia dolores molestias consequatur neque sunt magnam repellat aliquid tempore, tempora esse ea?</p>
+                <br>
+                <div class="row mb-4 flexSt">
+                    <div class="col-md-4">
+                        <img src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/clownfish-royalty-free-image-1590077233.jpg" class="img-fluid">
+                    </div>
+                    <div class="col-md-4">
+                        <img src="https://obs.line-scdn.net/0hVx_MrnbzCVdiNCWwPvV2AFhiCjhRWBpUBgJYVD5aV2MfDU8FXlpCOUE2XzAdUE4JDAZONUI8EmZJVxwHV1tB/w1200" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+            <!-- Data6 -->
+            <div id="data6">
+                <br><br>
+                <h1 class="text-center">ปลาสินสมุทร</h1>
+                <p class="text-center">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facilis dolores corrupti cum nobis enim natus id incidunt voluptatem, harum eaque fuga assumenda dolorem aliquid non ratione magni repudiandae temporibus consequuntur quae aperiam a sunt dicta vero? Est hic ad qui soluta itaque veritatis minima iure at quo temporibus vitae reiciendis dolore libero tenetur amet, esse nihil molestias porro quas error facilis doloribus repellat. Laborum nobis quo iste? Qui assumenda nihil quos nisi repudiandae maxime, obcaecati harum culpa soluta alias voluptas beatae necessitatibus voluptatibus unde. Ducimus ipsam laudantium, quia dolores molestias consequatur neque sunt magnam repellat aliquid tempore, tempora esse ea?</p>
+                <br>
+                <div class="row mb-4 flexSt">
+                    <div class="col-md-4">
+                        <img src="https://media.sciencephoto.com/image/c0319519/800wm" class="img-fluid">
+                    </div>
+                    <div class="col-md-4">
+                        <img src="https://seaunseen.com/wp-content/uploads/2014/12/DSC04288-1400-swm.jpg" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+            <!-- Data7 -->
+            <div id="data7">
+                <br><br>
+                <h1 class="text-center">แมงกะพรุน</h1>
+                <p class="text-center">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facilis dolores corrupti cum nobis enim natus id incidunt voluptatem, harum eaque fuga assumenda dolorem aliquid non ratione magni repudiandae temporibus consequuntur quae aperiam a sunt dicta vero? Est hic ad qui soluta itaque veritatis minima iure at quo temporibus vitae reiciendis dolore libero tenetur amet, esse nihil molestias porro quas error facilis doloribus repellat. Laborum nobis quo iste? Qui assumenda nihil quos nisi repudiandae maxime, obcaecati harum culpa soluta alias voluptas beatae necessitatibus voluptatibus unde. Ducimus ipsam laudantium, quia dolores molestias consequatur neque sunt magnam repellat aliquid tempore, tempora esse ea?</p>
+                <br>
+                <div class="row mb-4 flexSt">
+                    <div class="col-md-4">
+                        <img src="https://www.treehugger.com/thmb/0726edianjZ-gLrWGxKfvreZGuE=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/white-spotted-jellyfish---medusa-a-pois-bianchi-886942478-92d7b9c03de041bcb80ad23a67e7f3aa.jpg" class="img-fluid">
+                    </div>
+                    <div class="col-md-4">
+                        <img src="https://t3.ftcdn.net/jpg/04/87/66/16/360_F_487661673_NmozjwaYRrLf4yBXr9nKZQf8moCI8705.jpg" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer class="text-center p-4">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <p>Copyright &copy; Kittaporn Buriyameathakul 64011041</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
